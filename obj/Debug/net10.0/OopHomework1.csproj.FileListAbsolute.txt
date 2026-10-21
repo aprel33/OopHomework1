@@ -1,0 +1,16 @@
+E:\Progs\OopHomework1\OopHomework1\bin\Debug\net10.0\OopHomework1.exe
+E:\Progs\OopHomework1\OopHomework1\bin\Debug\net10.0\OopHomework1.deps.json
+E:\Progs\OopHomework1\OopHomework1\bin\Debug\net10.0\OopHomework1.runtimeconfig.json
+E:\Progs\OopHomework1\OopHomework1\bin\Debug\net10.0\OopHomework1.runtimeconfig.dev.json
+E:\Progs\OopHomework1\OopHomework1\bin\Debug\net10.0\OopHomework1.dll
+E:\Progs\OopHomework1\OopHomework1\bin\Debug\net10.0\OopHomework1.pdb
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomework1.GeneratedMSBuildEditorConfig.editorconfig
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomework1.AssemblyInfoInputs.cache
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomework1.AssemblyInfo.cs
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomework1.csproj.CoreCompileInputs.cache
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomework1.dll
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\refint\OopHomework1.dll
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomework1.pdb
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomework1.genruntimeconfig.cache
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\ref\OopHomework1.dll
+E:\Progs\OopHomework1\OopHomework1\obj\Debug\net10.0\OopHomew.33F8E2F5.Up2Date
