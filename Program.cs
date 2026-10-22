@@ -23,14 +23,18 @@ internal class Program
         service.RegisterChannel(email);
         service.RegisterChannel(telegram);
 
+        Console.WriteLine("=== Демонстрация работы системы ===");
+
         // 2. Создаём пользователя
         User user = new User(
             1,
-            "Григорий Оганесян",
-            "greg",
+            "Оганесян Григорий",
+            "oganesyan",
             "example_hash");
 
-        // 3. Создаём профиль
+        Console.WriteLine($"\nПользователь: {user.FullName}");
+
+        // 3. Создаём профиль пользователя
         UserProfile? profile = service.CreateProfile(user);
 
         if (profile == null)
@@ -44,11 +48,17 @@ internal class Program
         // 4. Добавляем контакты
         bool emailAdded = service.AddContact(
             user.Id,
-            new Contact(1, email.Id, "greg@gmail.com"));
+            new Contact(
+                1,
+                email.Id,
+                "oganesyan@gmail.com"));
 
         bool telegramAdded = service.AddContact(
             user.Id,
-            new Contact(2, telegram.Id, "@greg"));
+            new Contact(
+                2,
+                telegram.Id,
+                "@oganesyan"));
 
         Console.WriteLine(
             $"Электронная почта добавлена: {emailAdded}");
@@ -56,26 +66,36 @@ internal class Program
         Console.WriteLine(
             $"Telegram добавлен: {telegramAdded}");
 
-        // 5. Изменяем контакт
+        // 5. Изменяем Telegram-контакт
         bool updated = service.UpdateContact(
             user.Id,
             2,
-            "@ivan_new");
+            "@oganesyan_");
 
         Console.WriteLine(
-            $"Контакт изменён: {updated}");
+            $"Telegram-контакт изменён: {updated}");
 
-        // 6. Выводим статистику с деконструктором
+        // 6. Выводим статистику профиля
         service.ShowStatistics(user.Id);
 
-        // 7. Проверяем обработку ошибки
+        // 7. Проверяем добавление контакта с неизвестным каналом
         bool invalidContactAdded = service.AddContact(
             user.Id,
-            new Contact(3, 999, "unknown@example.com"));
+            new Contact(
+                3,
+                999,
+                "unknown@example.com"));
 
         Console.WriteLine(
-            $"\nДобавление контакта с неизвестным каналом: " +
-            $"{invalidContactAdded}");
+            "\nДобавление контакта с неизвестным каналом: " +
+            invalidContactAdded);
+
+        // 8. Проверяем попытку создания повторного профиля
+        UserProfile? duplicateProfile = service.CreateProfile(user);
+
+        Console.WriteLine(
+            "Создание повторного профиля: " +
+            (duplicateProfile != null));
 
         Console.WriteLine("\nДемонстрация завершена.");
         Console.ReadKey();
