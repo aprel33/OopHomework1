@@ -1,0 +1,43 @@
+
+name: .NET Build
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build C# project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Find and build project
+        shell: bash
+        run: |
+          project_file=$(find . -type f -name '*.sln' -print -quit)
+
+          if [ -z "$project_file" ]; then
+            project_file=$(find . -type f -name '*.csproj' -print -quit)
+          fi
+
+          if [ -z "$project_file" ]; then
+            echo "Solution or project file not found."
+            exit 1
+          fi
+
+          echo "Building: $project_file"
+          dotnet build "$project_file" --configuration Release
