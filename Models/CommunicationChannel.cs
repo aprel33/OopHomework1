@@ -7,6 +7,8 @@ namespace OopHomework1.Models;
 
 public class CommunicationChannel
 {
+    private int _id;
+    private string _name;
     public int Id 
     {
         get { return _id; }
