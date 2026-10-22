@@ -7,12 +7,17 @@ namespace OopHomework1.Models;
 
 public class CommunicationChannel
 {
-    public int Id { get; }
-    public string Name { get; }
+    public int Id 
+    {
+        get { return _id; }
+    }
+    public string Name{
+        get { return _name; }
+    }
 
     public CommunicationChannel(int id, string name)
     {
-        Id = id;
-        Name = name;
+        _id = id;
+        _name = name;
     }
 }
