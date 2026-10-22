@@ -9,7 +9,7 @@ public class User
 {
     private int Id;
     
-    public int Id { 
+    public int id { 
         get{
             return Id;
         }
