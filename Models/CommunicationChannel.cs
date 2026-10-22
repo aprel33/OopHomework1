@@ -18,8 +18,19 @@ public class CommunicationChannel
     }
 
     public CommunicationChannel(int id, string name)
-    {
+   {
+        
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException("Имя канала связи не может быть пустым.", nameof(name));
+        }
+
         _id = id;
         _name = name;
     }
+    public override string ToString()
+    {
+        return $"Канал: {_name} (ID: {_id})";
+    }
+}
 }
