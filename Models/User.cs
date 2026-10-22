@@ -7,6 +7,8 @@ namespace OopHomework1.Models;
 
 public class User
 {
+    private int Id;
+    
     public int Id { 
         get{
             return Id;
