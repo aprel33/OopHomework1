@@ -7,7 +7,11 @@ namespace OopHomework1.Models;
 
 public class User
 {
-    public int Id { get; }
+    public int Id { 
+        get{
+            return Id;
+        }
+    }
     public string FullName { get; }
     public string Login { get; }
     public string PasswordHash { get; }
