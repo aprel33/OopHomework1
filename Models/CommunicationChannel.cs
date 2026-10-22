@@ -33,4 +33,4 @@ public class CommunicationChannel
         return $"Канал: {_name} (ID: {_id})";
     }
 }
-}
+
