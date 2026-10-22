@@ -9,7 +9,8 @@ public class CommunicationChannel
 {
     private int _id;
     private string _name;
-    public int Id{
+    public int Id 
+    {
         get { return _id; }
     }
     public string Name{
