@@ -26,8 +26,8 @@ internal class Program
         // 2. Создаём пользователя
         User user = new User(
             1,
-            "Иван Иванов",
-            "ivan",
+            "Григорий Оганесян",
+            "greg",
             "example_hash");
 
         // 3. Создаём профиль
@@ -44,11 +44,11 @@ internal class Program
         // 4. Добавляем контакты
         bool emailAdded = service.AddContact(
             user.Id,
-            new Contact(1, email.Id, "ivan@example.com"));
+            new Contact(1, email.Id, "greg@gmail.com"));
 
         bool telegramAdded = service.AddContact(
             user.Id,
-            new Contact(2, telegram.Id, "@ivan"));
+            new Contact(2, telegram.Id, "@greg"));
 
         Console.WriteLine(
             $"Электронная почта добавлена: {emailAdded}");
